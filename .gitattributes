@@ -1,0 +1,5 @@
+# Force LF everywhere. A CRLF in a shell script or Dockerfile heredoc breaks
+# inside Linux containers ("/bin/sh^M: bad interpreter").
+* text=auto eol=lf
+*.png binary
+*.jpg binary

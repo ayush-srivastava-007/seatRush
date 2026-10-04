@@ -1,0 +1,12 @@
+# Host node_modules on Windows contain Windows binaries; they must never enter a Linux image.
+**/node_modules
+**/dist
+**/.turbo
+**/coverage
+**/.env
+**/.env.*
+!**/.env.example
+.git
+.github
+docs
+*.md

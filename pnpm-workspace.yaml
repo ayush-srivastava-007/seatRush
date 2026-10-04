@@ -1,0 +1,6 @@
+packages:
+  - apps/*
+  - packages/*
+
+# Refuse to install on a Node version outside package.json "engines".
+engineStrict: true

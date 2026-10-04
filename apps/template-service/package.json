@@ -1,0 +1,30 @@
+{
+  "name": "@seatrush/template-service",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch --env-file-if-exists=.env src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@seatrush/config": "workspace:*",
+    "@seatrush/contracts": "workspace:*",
+    "@seatrush/logger": "workspace:*",
+    "@seatrush/service-kit": "workspace:*",
+    "fastify": "^5.12.5",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@seatrush/tsconfig": "workspace:*",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15"
+  }
+}

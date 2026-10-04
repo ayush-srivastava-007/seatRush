@@ -1,0 +1,29 @@
+{
+  "name": "@seatrush/service-kit",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "test": "vitest run --passWithNoTests"
+  },
+  "devDependencies": {
+    "@seatrush/tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "@seatrush/logger": "workspace:*",
+    "fastify": "^5.12.5"
+  }
+}
